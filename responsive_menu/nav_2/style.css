@@ -1,0 +1,46 @@
+body{
+    background-color: #eeeeee;
+}
+/*strip the ul of padding and list styling*/
+ul{
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+}
+ul li{
+    float:left;
+    width: 140px;
+    height: 50px;
+    text-align:center;
+    line-height:50px;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #2f3036;
+}
+ul li a{
+    display:block;
+    text-decoration:none;
+    color:#F3F8F3;
+}
+ul li a:hover{
+    background-color:#88D788;
+}
+
+ul li ul li{
+    position:relative;
+    display :none;
+}
+ul li:hover ul li{
+    display :block;
+    animation: navmenu 500ms;
+}
+/*Provide simple animation to dropdown menu*/
+@keyframes navmenu{
+    0%{
+        opacity:0;
+        top:5px;
+    }
+    100%{
+        opacity:1;
+        top:0px;
+    }
+}
